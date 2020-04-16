@@ -1,0 +1,26 @@
+*
+{
+	box-sizing: border-box;
+}
+
+body
+{
+	margin: 0;
+	font-family: sans-serif;
+	padding-bottom: 100em;
+}
+
+.menu 
+{
+	background: rgba(220, 60, 20, 0.9);
+}
+
+.fixed
+{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: crimson;
+	padding: 10px;
+}
