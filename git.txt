@@ -1,0 +1,60 @@
+Comandos mas comunes de Git:
+
+git config --global user.name  "name" // configura el nombre del autor de nuestro controlador de versiones
+git config --global user.email "name" // configura el correo del autor de nuestro controlador de versiones
+git config --global color.ui   true   // activa los colores simbolicos para trabajar mejor. 
+git config --global color.ui   false // activa los colores simbolicos para trabajar mejor. 
+git config --global --list // nos muestra una lista de todas las configuraciones realizadas.
+
+git init // inicia un proyecto
+
+git status // nos indica que esta pendiente para agregar al futuro commit.
+
+git add "nombre del archivo" // nos permite subir un unico archivo
+
+git add -A // permite subir todos los archivos de una vez.
+
+
+git commit -m "Comentario"   // permite crear un punto de restaturacion.
+
+git reset --hard // Elimina un punto de restauracion modificando el codigo fisico.
+git reset --soft // Elimina un punto de restauracion sin modificar el codigo fisico.
+
+git branch "name" // crea una linea alterna de tiempo respecto a codigo con el nombre especificado.
+git branch -D "name" // Elimina linea alterna de tiempo respecto a codigo con el nombre especificado.
+
+git log // nos muestra una lista de todos los commit con su respectivo autor y codigo realizado en el proyecto.
+
+git checkout "codigo commit (head)" // permite movernos entre los diferentes puntos de restauracion
+git checkout "name rama" // permite movernos entre las diferentes ramas si existen.
+git checkout -b "name rama" // permite crear una rama  y movernos a esa rama.
+
+git merge "name rama" // permite FUSIONAR RAMAS nota: Debes estar posicionado en la rama que absorbera la rama
+                        que especifiquemos en este comando.
+
+------------------------------------------------------------------------------------------
+git clone "link" // permite clonar un proyecto de un repositorio.
+
+git remote add origin "link" // vincula repositorio local con el repositorio remoto.
+git remote -v // permite mostrar las configuraciones del escritorio remoto 
+git remote remove origin // Elimina la vinculacion entre el repositorio local con el repositorio remoto.
+git push origin master  // Sube el proyecto con sus commit del repositorio local al remoto.
+
+--------------------------------------------------------------------------------------------
+
+git fetch origin // Descarga los archivos y commit del repositorio remoto al repositorio local en una rama oculta.
+git merge origin/master // Fusiona los cambios recibidos con la rama oculta con la rama master de nosotros.
+                        (mismos principios debes estar posicionado en la rama principal (master)).
+
+
+Forma General de trabajo basica.
+    Subir cambios realizados:
+        git add -A 
+        git commit -m "comentario"
+        git push origin master 
+-- Sincronizar cambios del remoto con el local 
+        git fetch origin 
+        git merge origin/master 
+
+
+
