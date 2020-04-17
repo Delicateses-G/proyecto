@@ -103,13 +103,72 @@ Incluso puedes colocarlo de forma asociativa a un texto siempre y cuando lo iden
 $vector['dia'] = 17;     // El vector con el subindice 'dia' tiene el valor 17;
 $vector['mes'] = 04;     // El vector con el subindice 'mes' tiene el valor 04;
 $vector['anio'] = 2020;  // El vector con el subindice 'anio' tiene el valor 2020;
+----------------------------------------------------------------------------------------------------------------------------
+Creacion de funciones en PHP:
+Sintaxis
+
+function nombreFuncion (parametros){ acciones a realizar}.
+// ten en cuanta que si no recibe parametros simplemente se deja vacio ().
 
 ----------------------------------------------------------------------------------------------------------------------------
+Abrir una Conexion con de BD  MySQL con Php
+Para mayor comodidad se guarda la siguiente informacion en variables (no es obligatorio)
+$host=""   //  Hosting
+$user=""   // Usuario de Base de Datos
+$pass=""  // Contraseña del Usuario de Base de datos
+$bd=""    // Nombre de la base de datos.
 
+Estructura Principal.
 
+mysqli_connect($host,$user,$pass,$bd) or die ("Error en sentencia de conexion");
 
+Para todas las acciones con SQL necesitamos colocar esa estructura como parametro de conexion
+por lo que para poder usarla de forma practica lo utilizamos de la siguiente forma:
 
+$conexion = mysqli_connect($host,$user,$pass,$bd) or die ("Error en sentencia de conexion");
+
+----------------------------------------------------------------------------------------------------------------------
+todas las Acciones de SQL son conocidas como query o consulta, en php existe una funcion ya predeterminada llamada
+mysqli_query(Conexion,Consulta), que recibe como parametro la conexion y la consulta a realizar.
+el mismo modo existe una funcion llamada mysqli_error(conexion), que recibe como parametro los datos de conexion, cuya 
+funcion simplemente es indicarnos por que la accion de MySQL no se esta realizando.
+----------------------------------------------------------------------------------------------------------------------
+Acciones Basicas mas comunes en una base de datos son:
+-Seleccionar
+-Insertar
+-Actualizar
+-Borrar
+
+Para ello dependemos de la tabla y campos que en ella existan, para el ejemplo supongamos que existe una tabla con dos 
+campos.
+
+Estructura de las sentencias Basicas:
+
+Seleccionar:
+
+mysqli_query($conexion,"SELECT * FROM tabla") 
+                or die ("Problemas en la sentencia select".mysqli_error($conexion));
+
+Insertar:
+
+mysqli_query($conexion,"INSERT INTO tabla (campo1,campo2) VALUES ('Ejemplo1','Ejemplo2')") 
+                or die ("Problemas en la sentencia insert".mysqli_error($conexion));
+
+Actualizar:
+
+mysqli_query($conexion,"UPDATE tabla SET campo1 = 'Nuevo valor'") 
+                or die ("Problemas en la sentencia update".mysqli_error($conexion));
+
+Borrar:
+
+mysqli_query($conexion,"DELETE FROM tabla") 
+                or die ("Problemas en la sentencia delete".mysqli_error($conexion));
+
+Nota: Ten en cuenta que son acciones BASICAS realmente el segundo parametro son consultas
+estructuradas en SQL, donde colocas los filtos, el orden, los limites, funciones de SQL, uniones de tabla entre otros.
+---------------------------------------------------------------------------------------
 
 */
+
 
 ?>
