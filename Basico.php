@@ -164,6 +164,23 @@ Borrar:
 mysqli_query($conexion,"DELETE FROM tabla") 
                 or die ("Problemas en la sentencia delete".mysqli_error($conexion));
 
+En el caso que nosotros queremos RECORER los registros se utiliza una funcion "fetch de arreglos", es decir,
+iniciamos una variable que almacenara el recorrido de esa consulta, para acceder a los datos se debe de
+colocar dicha variable con un subindice que indica el campo a devolver, ejemplo:
+
+Se realizo un select, y ahora queremos mostrar los registros, usaremos una estructura condicional
+que nos muestre los valores de nuestra consulta.
+
+$select = mysqli_query($conexion,"SELECT * FROM tabla") or die ("Problemas en la sentencia select".mysqli_error($conexion));
+
+while( $registros = mysqli_fetch_array($select))
+{
+    echo $registros['camp1'];
+    echo $registros['camp2'];
+}
+Mientras que esa busqueda tenda data retornara true y mostrara los registros
+cuando se termine la busquea saldra del ciclo.
+
 Nota: Ten en cuenta que son acciones BASICAS realmente el segundo parametro son consultas
 estructuradas en SQL, donde colocas los filtos, el orden, los limites, funciones de SQL, uniones de tabla entre otros.
 ---------------------------------------------------------------------------------------
