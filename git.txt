@@ -3,7 +3,7 @@ Comandos mas comunes de Git:
 git config --global user.name  "name" // configura el nombre del autor de nuestro controlador de versiones
 git config --global user.email "name" // configura el correo del autor de nuestro controlador de versiones
 git config --global color.ui   true   // activa los colores simbolicos para trabajar mejor. 
-git config --global color.ui   false // activa los colores simbolicos para trabajar mejor. 
+git config --global color.ui   false // desactiva los colores simbolicos para trabajar mejor. 
 git config --global --list // nos muestra una lista de todas las configuraciones realizadas.
 
 git init // inicia un proyecto

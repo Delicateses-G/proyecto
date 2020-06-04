@@ -1,0 +1,23 @@
+Realizar un Login que este validado con js del lado del front-end.
+
+Se debe de solicitar:
+- Correo.
+- Contraseña.
+
+El correo debe de poseer un ejemplo.
+La contraseña no debe mostrarse.
+
+Las validaciones deben aparecer debajo de el campo correspondiente.
+
+Se debe validar cuando llegen a:
+Maximo de 50 caracteres minimo 2 caracteres.
+El correo debe de poseer el @ y el .;
+
+Bordes redondeados.
+
+se activa la validacion al dejar el campo.
+
+el boton de envio solo debe de activarse cuando todos los campos sean validos
+letras blancas botton azul de borde de 2px
+
+contenido centrado
