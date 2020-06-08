@@ -12,10 +12,14 @@
     <div class="caja">
     <h2>Iniciar Sesión</h2>
     <span> o <a href="registrarse.html">Registrarte</a></span>
-    <input type="text" class="campo">
-    <input type="password" class="campo">
-    <input type="submit" value="continuar" class="btn_submit">
+    <input type="text" class="campo" id="emailUser" placeholder="Ingresa tu correo 'example@example.com'">
+    <span class="notificacion" id="notificacionEmailLogin"></span>
+    <input type="password" class="campo" id="passwordUser" placeholder="Ingresa tu contraseña">
+    <span class="notificacion" id="notificacionPasswordLogin"></span>
+
+    <input type="submit" value="continuar" class="btn_submit" id="btn_submit_login">
     <a href="index.html" class="a_btn_c">cancelar</a>
     </div>
+    <script src="validacionLogin.js"></script>
 </body>
 </html>

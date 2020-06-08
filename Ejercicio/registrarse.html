@@ -10,15 +10,18 @@
 <body>
     <div class="caja" id='caja'>
     <h2>Registrarse</h2>
-    <span> o <a href="login.hmtl">Iniciar Sesión</a></span>
+    <span> o <a href="login.html">Iniciar Sesión</a></span>
     <form action="#" method="post" id="formularioRegistro">
     <input type="text" class="campo" id="email" placeholder="Ingresa un correo 'example@example.com'">
+    <span class="notificacion" id="notificacionEmail"></span>
     <input type="password" class="campo" id="password" placeholder="Ingresa una contraseña">
+    <span class="notificacion" id="notificacionPassword"></span>
     <input type="password" class="campo" id="confPassword" placeholder="Ingresa nuevamente tu constraseña">
+    <span class="notificacion" id="notificacionConfpassword"></span>
     <input type="submit" value="continuar" class="btn_submit" id="btn_submit">
     <a href="index.html" class="a_btn_c">cancelar</a>
     </form>
 </div>
-<script src="main.js"></script>
+<script src="validacionRegistro.js"></script>
 </body>
 </html>

@@ -66,3 +66,13 @@ background-color: #00b8eb;
 .a_btn:hover{
     background-color: #00b8eb;
 }
+.notificacion{
+    display: none;
+    padding: 5px;
+    width: 300px;
+    margin: 5px auto;
+    border-radius: 4px;
+    --border: 1px solid #000000;
+    color: #c01406;
+    background: #fce883;
+}
